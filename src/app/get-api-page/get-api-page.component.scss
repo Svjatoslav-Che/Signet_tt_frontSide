@@ -1,0 +1,81 @@
+.mainframe_rules {
+  display: block;
+  width: 100%;
+}
+
+.button_container {
+  margin: 16px 0 16px 0;
+  display: flex;
+  justify-content: center;
+
+  .single_button {
+    padding: 16px;
+    border-radius: 16px;
+    border: none;
+    background: #968aec;
+    color: #fff;
+
+    &:hover {
+      background: #a197ee;
+    }
+
+    &:disabled {
+      background: #c1c1c1;
+      color: #efefef;
+    }
+
+    &.__first {
+      margin-right: 8px;
+    }
+
+    &.__last {
+      margin-left: 8px;
+    }
+  }
+
+}
+
+.text_container {
+  display: flex;
+  justify-content: center;
+}
+
+.loader_placer {
+  margin-top: 16px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+table.customTable {
+  margin-top: 16px;
+  width: 100%;
+  text-align: center;
+  border-collapse: collapse;
+}
+table.customTable td, table.customTable th {
+  padding: 8px 8px;
+}
+table.customTable tr:nth-child(even) {
+  background: #eeebff;
+}
+table.customTable thead {
+  background: #a197ee;
+}
+table.customTable thead th {
+  color: #FFFFFF;
+  text-align: center;
+  font-weight: normal;
+}
+
+.intable_button {
+  width: 42px;
+  height: 18px;
+  background:  #efefef;
+  border: none;
+  border-radius: 8px;
+  &:hover {
+    cursor: pointer;
+    background: #FFFFFF;
+  }
+}

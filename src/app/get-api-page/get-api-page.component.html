@@ -1,0 +1,37 @@
+<div class="mainframe_rules">
+  <div class="button_container">
+    <button class="single_button __first" (click)="getData()" [disabled]="data">Get Data</button>
+    <button class="single_button __last" (click)="abortData()" [disabled]="!data">Abort Data</button>
+  </div>
+
+  <div class="text_container">
+    <p> {{data ? 'Data received, you can Abort this action' : 'Click the Get Data button to load some data'}} </p>
+  </div>
+
+  <div *ngIf="data else nodata">
+    <table class="customTable">
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>NAME</th>
+          <th>GENRE 1</th>
+          <th>GENRE 2</th>
+          <th>YEAR sort: <button class="intable_button" (click)="sortYearToggle()">{{sortYear}}</button></th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let movie of data let i = index">
+          <td>{{movie.id}}</td>
+          <td>{{movie.name}}</td>
+          <td>{{movie.genre1}}</td>
+          <td>{{movie.genre2}}</td>
+          <td>{{movie.year}}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+
+<ng-template #nodata>
+  <app-loader class="loader_placer"></app-loader>
+</ng-template>
