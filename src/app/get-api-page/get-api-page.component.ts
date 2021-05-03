@@ -35,11 +35,11 @@ export class GetApiPageComponent implements OnInit {
         break;
       }
       case 'Up': {
-        this.sortYear = 'Dwn';
+        this.sortYear = 'Down';
         this.sortYearAction(this.sortYear);
         break;
       }
-      case 'Dwn': {
+      case 'Down': {
         this.sortYear = 'Up';
         this.sortYearAction(this.sortYear);
         break;
@@ -54,7 +54,7 @@ export class GetApiPageComponent implements OnInit {
           return a.year - b.year;
         });
       }
-      case 'Dwn': {
+      case 'Down': {
         return this.data.sort(function (a: any, b: any) {
           return b.year - a.year;
         });

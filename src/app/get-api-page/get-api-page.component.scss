@@ -17,11 +17,13 @@
 
     &:hover {
       background: #a197ee;
+      cursor: pointer;
     }
 
     &:disabled {
       background: #c1c1c1;
       color: #efefef;
+      cursor: auto;
     }
 
     &.__first {
@@ -69,8 +71,8 @@ table.customTable thead th {
 }
 
 .intable_button {
-  width: 42px;
-  height: 18px;
+  width: 48px;
+  height: 22px;
   background:  #efefef;
   border: none;
   border-radius: 8px;
